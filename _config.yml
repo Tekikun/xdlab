@@ -1,10 +1,10 @@
 # Site settings
-title: XD Lab
+title: XDLab
 description: Space Engineering & AI Research Laboratory at Embry-Riddle Aeronautical University
 author: Dr. Di Wu
-email: d_wu@mit.edu
-url: "https://sriramelango.github.io"
-baseurl: "/xdlab"
+email: wud2@erau.edu
+url: "https://xdlab.space"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
