@@ -342,7 +342,7 @@ p {
 }
 
 .cta-button.third {
-    background: var(--gradient-secondary);
+    background: var(--gradient-third);
     color: var(--dark-blue);
     box-shadow: var(--shadow);
 }
