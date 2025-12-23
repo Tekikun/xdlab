@@ -341,6 +341,18 @@ p {
     box-shadow: var(--shadow);
 }
 
+.cta-button.third {
+    background: var(--gradient-secondary);
+    color: var(--dark-blue);
+    box-shadow: var(--shadow);
+}
+
+.cta-button.third:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+    background: linear-gradient(135deg, #FFE55C 0%, #FFD700 100%);
+}
+
 /* Section Headers and Footers */
 .section-header {
     text-align: center;
