@@ -48,6 +48,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
+    scroll-behavior: smooth;
 }
 
 /* Typography */
@@ -350,7 +351,7 @@ p {
 .cta-button.third:hover {
     transform: translateY(-2px);
     box-shadow: var(--hover-shadow);
-    background: linear-gradient(135deg, #FFE55C 0%, #FFD700 100%);
+    background: linear-gradient(135deg, #FFE55C 0%,  #9b9858 50%, #ddbc04 100%);
 }
 
 /* Section Headers and Footers */
