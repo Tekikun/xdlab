@@ -498,24 +498,31 @@ p {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    align-items: center;
 }
 
 .team-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--accent-color);
-    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.3rem;
+    background: var(--gradient-primary);
+    color: var(--white) !important;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 0 18px rbga(74, 144, 226, 0.35);
     transition: all 0.3s ease;
 }
 
 .team-link:hover {
-    background: #FFB800;
+    background: linear-gradient(135deg, #5A9FE2 0%, #2E4A9A 50%, #1B2A46 100%;
+    color: var(--white) !important;
+    text-decoration: none;
     transform: translateY(-2px);
-    box-shadow: var(--shadow);
+    box-shadow: 0 0 24px rgba(74, 144, 226, 0.55);
 }
 
 /* Publications Section */
