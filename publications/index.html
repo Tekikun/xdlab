@@ -185,7 +185,45 @@ title: Publications
         </div>
     </div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("publication-search");
+    const yearFilter = document.getElementById("year-filter");
+    const publicationItems = document.querySelectorAll(".publication-item");
 
+    function filterPublications() {
+        const searchTerm = searchInput
+            ? searchInput.value.toLowerCase().trim()
+            : "";
+
+        const selectedYear = yearFilter
+            ? yearFilter.value.trim()
+            : "";
+
+        publicationItems.forEach(function (item) {
+            const itemText = item.textContent.toLowerCase();
+            const itemYear = item.getAttribute("data-year") || "";
+
+            const matchesSearch =
+                searchTerm === "" || itemText.includes(searchTerm);
+
+            const matchesYear =
+                selectedYear === "" || itemYear === selectedYear;
+
+            item.style.display =
+                matchesSearch && matchesYear ? "" : "none";
+        });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener("input", filterPublications);
+    }
+
+    if (yearFilter) {
+        yearFilter.addEventListener("change", filterPublications);
+    }
+});
+</script>
 <!-- Footer -->
 <footer>
     <div class="footer-content">
