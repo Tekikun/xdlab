@@ -40,7 +40,7 @@ title: Publications
 </section>
 
 <!-- Publications by Year -->
-<section class="page-content" style="background: var(--section-bg);">
+<section class="page-content publication-year-section" style="background: var(--section-bg);">
     <div class="container">
         <h2 class="academic-title">2025 Publications</h2>
         
@@ -56,7 +56,7 @@ title: Publications
     </div>
 </section>
 
-<section class="page-content">
+<section class="page-content publication-year-section" style="background: var(--section-bg);">
     <div class="container">
         <h2 class="academic-title">2024 Publications</h2>
         
@@ -104,7 +104,7 @@ title: Publications
     </div>
 </section>
 
-<section class="page-content" style="background: var(--section-bg);">
+<section class="page-content publication-year-section" style="background: var(--section-bg);">
     <div class="container">
         <h2 class="academic-title">2023 Publications</h2>
         
@@ -120,7 +120,7 @@ title: Publications
     </div>
 </section>
 
-<section class="page-content">
+<section class="page-content publication-year-section" style="background: var(--section-bg);">
     <div class="container">
         <h2 class="academic-title">2021 Publications</h2>
         
@@ -136,7 +136,7 @@ title: Publications
     </div>
 </section>
 
-<section class="page-content" style="background: var(--section-bg);">
+<section class="page-content publication-year-section" style="background: var(--section-bg);">
     <div class="container">
         <h2 class="academic-title">2020 Publications</h2>
         
@@ -191,39 +191,53 @@ title: Publications
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("publication-search");
     const yearFilter = document.getElementById("year-filter");
-    const publicationItems = document.querySelectorAll(".publication-item");
+    const yearSections = document.querySelectorAll(".publication-year-section");
+
+    if (!searchInput || !yearFilter || yearSections.length === 0) {
+        return;
+    }
 
     function filterPublications() {
-        const searchTerm = searchInput
-            ? searchInput.value.toLowerCase().trim()
-            : "";
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedYear = yearFilter.value.trim();
 
-        const selectedYear = yearFilter
-            ? yearFilter.value.trim()
-            : "";
+        yearSections.forEach(function (section) {
+            const publicationItems =
+                section.querySelectorAll(".publication-item");
 
-        publicationItems.forEach(function (item) {
-            const itemText = item.textContent.toLowerCase();
-            const itemYear = item.getAttribute("data-year") || "";
+            let visibleCount = 0;
 
-            const matchesSearch =
-                searchTerm === "" || itemText.includes(searchTerm);
+            publicationItems.forEach(function (item) {
+                const itemText = item.textContent.toLowerCase();
+                const itemYear = item.dataset.year || "";
 
-            const matchesYear =
-                selectedYear === "" || itemYear === selectedYear;
+                const matchesSearch =
+                    searchTerm === "" ||
+                    itemText.includes(searchTerm);
 
-            item.style.display =
-                matchesSearch && matchesYear ? "" : "none";
+                const matchesYear =
+                    selectedYear === "" ||
+                    itemYear === selectedYear;
+
+                const shouldShow =
+                    matchesSearch && matchesYear;
+
+                item.style.display = shouldShow ? "" : "none";
+
+                if (shouldShow) {
+                    visibleCount++;
+                }
+            });
+
+            section.style.display =
+                visibleCount > 0 ? "" : "none";
         });
     }
 
-    if (searchInput) {
-        searchInput.addEventListener("input", filterPublications);
-    }
+    searchInput.addEventListener("input", filterPublications);
+    yearFilter.addEventListener("change", filterPublications);
 
-    if (yearFilter) {
-        yearFilter.addEventListener("change", filterPublications);
-    }
+    filterPublications();
 });
 </script>
 <!-- Footer -->
