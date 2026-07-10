@@ -441,245 +441,43 @@ title: Publications
     </div>
 </section>
 
-<style>
-/* Media & Features — page-specific styling */
-#media-features {
-    background: var(--background-color);
-    padding: 4rem 0;
-    overflow: hidden;
-}
-
-#media-features .media-intro {
-    max-width: 760px;
-    margin: 0 auto 3rem;
-    text-align: center;
-}
-
-#media-features .media-intro h2 {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 2rem;
-    color: var(--white);
-}
-
-#media-features .media-intro h2::after {
-    content: "";
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    width: 60px;
-    height: 3px;
-    border-radius: 2px;
-    background: var(--gradient-secondary);
-    transform: translateX(-50%);
-}
-
-#media-features .media-intro p {
-    margin: 0 auto;
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    line-height: 1.75;
-}
-
-#media-features .media-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-#media-features .media-item {
-    position: relative;
-    width: 100%;
-    padding: 2rem 2rem 2rem 2.25rem;
-    overflow: hidden;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
-}
-
-#media-features .media-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 5px;
-    background: var(--gradient-primary);
-}
-
-#media-features .media-item:hover {
-    background: var(--card-hover);
-    box-shadow: var(--hover-shadow);
-    transform: translateY(-3px);
-}
-
-#media-features .media-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-}
-
-#media-features .media-type {
-    display: inline-block;
-    padding: 0.35rem 0.8rem;
-    color: var(--primary-color);
-    background: rgba(74, 144, 226, 0.12);
-    border: 1px solid var(--primary-color);
-    border-radius: 999px;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-
-#media-features .media-date {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-#media-features .media-item h3 {
-    max-width: 100%;
-    margin: 0 0 0.6rem;
-    font-size: 1.45rem;
-    line-height: 1.35;
-    overflow-wrap: anywhere;
-}
-
-#media-features .media-title-link,
-#media-features .media-title-link:link,
-#media-features .media-title-link:visited {
-    color: var(--white) !important;
-    text-decoration: none !important;
-}
-
-#media-features .media-title-link:hover,
-#media-features .media-title-link:focus {
-    color: var(--primary-color) !important;
-    text-decoration: underline !important;
-    text-underline-offset: 4px;
-}
-
-#media-features .media-source {
-    margin: 0 0 1rem;
-    color: var(--primary-color);
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-#media-features .media-description {
-    max-width: 900px;
-    margin: 0 0 1rem;
-    color: var(--text-color);
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-#media-features .media-read-link,
-#media-features .media-read-link:link,
-#media-features .media-read-link:visited {
-    display: inline-block;
-    margin-top: 0.35rem;
-    color: var(--primary-color) !important;
-    font-size: 0.95rem;
-    font-weight: 700;
-    text-decoration: none !important;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-#media-features .media-read-link:hover,
-#media-features .media-read-link:focus {
-    color: var(--accent-color) !important;
-    transform: translateX(4px);
-}
-
-#media-features .media-video-wrapper {
-    position: relative;
-    width: 100%;
-    margin: 1.25rem 0 0.5rem;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    background: var(--darker-blue);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-}
-
-#media-features .media-video-wrapper iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-@media (max-width: 768px) {
-    #media-features {
-        padding: 3rem 0;
-    }
-
-    #media-features .media-item {
-        padding: 1.5rem 1.5rem 1.5rem 1.75rem;
-    }
-
-    #media-features .media-item h3 {
-        font-size: 1.2rem;
-    }
-
-    #media-features .media-intro p {
-        font-size: 1rem;
-    }
-}
-</style>
 
 <!-- Media and Features -->
-<section id="media-features">
+<section class="page-content" style="background: var(--background-color);">
     <div class="container">
 
-        <div class="media-intro">
+        <div class="section-header">
             <h2 class="academic-title">Media &amp; Features</h2>
-            <p>
+            <p class="academic-text">
                 Explore news coverage, institutional features, and video content
                 highlighting XDLab research, student achievement, and participation
                 in the Capture the Satellite competition.
             </p>
         </div>
 
-        <div class="media-list">
+        <div class="publications-list">
 
-            <article class="media-item">
-                <div class="media-meta">
-                    <span class="media-type">University News</span>
-                    <span class="media-date">January 23, 2026</span>
-                </div>
+            <!-- Embry-Riddle Article -->
+            <article class="publication-item">
+                <p class="journal">University News · January 23, 2026</p>
 
                 <h3>
                     <a
                         href="https://erau.edu/about/news-and-stories/news/embry-riddle-student-team-earns-first-place-in-capture-the-satellite-competition"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="media-title-link"
+                        class="publication-title-link"
                     >
                         Embry-Riddle Student Team Earns First Place in
                         Capture-the-Satellite Competition
                     </a>
                 </h3>
 
-                <p class="media-source">
+                <p class="authors">
                     Embry-Riddle Aeronautical University
                 </p>
 
-                <p class="media-description">
+                <p class="academic-text">
                     Embry-Riddle highlights XDLab’s first-place finish in the
                     Capture the Satellite competition at AIAA SciTech Forum 2026.
                     The feature discusses the team’s hybrid use of classical orbital
@@ -691,35 +489,33 @@ title: Publications
                     href="https://erau.edu/about/news-and-stories/news/embry-riddle-student-team-earns-first-place-in-capture-the-satellite-competition"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="media-read-link"
+                    class="publication-pdf-link"
                 >
                     Read Article →
                 </a>
             </article>
 
-            <article class="media-item">
-                <div class="media-meta">
-                    <span class="media-type">Industry Feature</span>
-                    <span class="media-date">January 16, 2026</span>
-                </div>
+            <!-- Aerospace America Article -->
+            <article class="publication-item">
+                <p class="journal">Industry Feature · January 16, 2026</p>
 
                 <h3>
                     <a
                         href="https://aerospaceamerica.aiaa.org/institute/gotcha-students-capture-malfunctioning-satellite-in-spacecraft-control-exercise/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="media-title-link"
+                        class="publication-title-link"
                     >
                         GOTCHA! Students Capture Malfunctioning Satellite in
                         Spacecraft Control Exercise
                     </a>
                 </h3>
 
-                <p class="media-source">
+                <p class="authors">
                     Aerospace America · Lawrence Bernard
                 </p>
 
-                <p class="media-description">
+                <p class="academic-text">
                     Aerospace America reports on XDLab’s victory in the Capture
                     the Satellite competition, where the team navigated a spacecraft
                     through a rendezvous scenario involving a malfunctioning target
@@ -730,44 +526,60 @@ title: Publications
                     href="https://aerospaceamerica.aiaa.org/institute/gotcha-students-capture-malfunctioning-satellite-in-spacecraft-control-exercise/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="media-read-link"
+                    class="publication-pdf-link"
                 >
                     Read Article →
                 </a>
             </article>
 
-            <article class="media-item">
-                <div class="media-meta">
-                    <span class="media-type">Video</span>
-                    <span class="media-date">AIAA SciTech Forum 2026</span>
-                </div>
+            <!-- AIAA Video -->
+            <article class="publication-item">
+                <p class="journal">Video · AIAA SciTech Forum 2026</p>
 
                 <h3>
                     <a
                         href="https://www.youtube.com/watch?v=xlHulk8dYh0"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="media-title-link"
+                        class="publication-title-link"
                     >
                         Capture the Satellite Challenge — Forum 360
                     </a>
                 </h3>
 
-                <p class="media-source">AIAA</p>
+                <p class="authors">AIAA</p>
 
-                <p class="media-description">
+                <p class="academic-text">
                     Watch the Forum 360 discussion and competition overview,
                     including the spacecraft autonomy challenge and the student
                     teams’ technical approaches.
                 </p>
 
-                <div class="media-video-wrapper">
+                <div
+                    style="
+                        position: relative;
+                        width: 100%;
+                        margin: 1.5rem 0 1rem;
+                        padding-bottom: 56.25%;
+                        overflow: hidden;
+                        border: 1px solid var(--border-color);
+                        border-radius: 10px;
+                        background: var(--darker-blue);
+                    "
+                >
                     <iframe
                         src="https://www.youtube.com/embed/xlHulk8dYh0"
                         title="Capture the Satellite Challenge Forum 360"
                         loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen
+                        style="
+                            position: absolute;
+                            inset: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: 0;
+                        "
                     ></iframe>
                 </div>
 
@@ -775,7 +587,7 @@ title: Publications
                     href="https://www.youtube.com/watch?v=xlHulk8dYh0"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="media-read-link"
+                    class="publication-pdf-link"
                 >
                     Watch on YouTube →
                 </a>
