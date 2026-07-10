@@ -1288,3 +1288,35 @@ footer::before {
         inset: 0 -1rem;
     }
 }
+/* Publication PDF links */
+.publication-title-link,
+.publication-title-link:link,
+.publication-title-link:visited {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.publication-title-link:hover,
+.publication-title-link:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.publication-pdf-link,
+.publication-pdf-link:link,
+.publication-pdf-link:visited {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.publication-pdf-link:hover,
+.publication-pdf-link:focus {
+    color: var(--accent-color);
+    transform: translateX(4px);
+}
